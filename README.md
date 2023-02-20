@@ -14,7 +14,7 @@ To Setup Watson Do The Following
 ## Authors
 
 - [@Sorted1](https://www.github.com/sorted1)
-- [@node-digital](https://www.github.com/Kauwzi)
+- [@node-digital](https://www.github.com/node-digital)
 - [@0wls3c](https://www.github.com/0wls3c)
 ## License
 
