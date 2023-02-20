@@ -18,7 +18,7 @@ def banner():
     print(f"                      {Fore.RED}██{Fore.RESET}║{Fore.RED}███{Fore.RESET}╗{Fore.RED}██{Fore.RESET}║{Fore.RED}██{Fore.RESET}╔══{Fore.RED}██{Fore.RESET}║   {Fore.RED}██{Fore.RESET}║   ╚════{Fore.RED}██{Fore.RESET}║{Fore.RED}██{Fore.RESET}║   {Fore.RED}██{Fore.RESET}║{Fore.RED}██{Fore.RESET}║╚{Fore.RED}██{Fore.RESET}╗{Fore.RED}██{Fore.RESET}║".center(os.get_terminal_size().columns))
     print(f"                      {Fore.RESET}╚{Fore.RED}███{Fore.RESET}╔{Fore.RED}███{Fore.RESET}╔╝{Fore.RED}██{Fore.RESET}║  {Fore.RED}██{Fore.RESET}║   {Fore.RED}██{Fore.RESET}║   {Fore.RED}███████{Fore.RESET}║╚{Fore.RED}██████{Fore.RESET}╔╝{Fore.RED}██{Fore.RESET}║ ╚{Fore.RED}████{Fore.RESET}║".center(os.get_terminal_size().columns))
     print(f"{Fore.RESET}    ╚══╝╚══╝ ╚═╝  ╚═╝   ╚═╝   ╚══════╝ ╚═════╝ ╚═╝  ╚═══╝".center(os.get_terminal_size().columns))
-    print(f"Carrier Clerk [1] Email Validator [2]".center(os.get_terminal_size().columns))
+    print(f"[1] Carrier Clerk [2] Email Validator [3] IP InfoMaster".center(os.get_terminal_size().columns))
     print("────────────────────────────────────────────────────────────────────────────────────────────────────")
     print("")
 banner()
@@ -79,3 +79,21 @@ if choice == "2":
       leaked = res["leaked"]
       print(f"{email} | Valid: {ear} | Disposable: {dispo} | Fraud Score: {fs} | Leaked: {leaked}")
   check_email(email)
+if choice == "3":
+    clear()
+    ip = input("Insert IP: ")
+    def ipinfo(ip):
+        api_url = f"http://ipwho.is/{ip}"
+        response = requests.get(api_url)
+        if response.status_code != 200:
+            print(f"Failed to retrieve IP information for {ip}. Response status code: {response.status_code}")
+        else:
+            res = response.json()
+            typ = res["type"]
+            cont = res["continent"]
+            cou = res["country"]
+            region = res["region"]
+            city = res["city"]
+            postal = res["postal"]
+            print(f"IP: {ip}\nType: {typ}\nContinent: {cont}\nCountry: {cou}\nRegion: {region}\nCity: {city}\nPostal: {postal}")
+    ipinfo(ip)
