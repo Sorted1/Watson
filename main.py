@@ -18,14 +18,14 @@ def banner():
     print(f"                      {Fore.RED}██{Fore.RESET}║{Fore.RED}███{Fore.RESET}╗{Fore.RED}██{Fore.RESET}║{Fore.RED}██{Fore.RESET}╔══{Fore.RED}██{Fore.RESET}║   {Fore.RED}██{Fore.RESET}║   ╚════{Fore.RED}██{Fore.RESET}║{Fore.RED}██{Fore.RESET}║   {Fore.RED}██{Fore.RESET}║{Fore.RED}██{Fore.RESET}║╚{Fore.RED}██{Fore.RESET}╗{Fore.RED}██{Fore.RESET}║".center(os.get_terminal_size().columns))
     print(f"                      {Fore.RESET}╚{Fore.RED}███{Fore.RESET}╔{Fore.RED}███{Fore.RESET}╔╝{Fore.RED}██{Fore.RESET}║  {Fore.RED}██{Fore.RESET}║   {Fore.RED}██{Fore.RESET}║   {Fore.RED}███████{Fore.RESET}║╚{Fore.RED}██████{Fore.RESET}╔╝{Fore.RED}██{Fore.RESET}║ ╚{Fore.RED}████{Fore.RESET}║".center(os.get_terminal_size().columns))
     print(f"{Fore.RESET}    ╚══╝╚══╝ ╚═╝  ╚═╝   ╚═╝   ╚══════╝ ╚═════╝ ╚═╝  ╚═══╝".center(os.get_terminal_size().columns))
-    print(f"Carrier Clerk [1]".center(os.get_terminal_size().columns))
+    print(f"Carrier Clerk [1] Email Validator [2]".center(os.get_terminal_size().columns))
     print("────────────────────────────────────────────────────────────────────────────────────────────────────")
     print("")
 banner()
 choice = input(f"{Fore.RED}Choice: {Fore.RESET}")
 if choice == "1":
     clear()
-    with open("Config.json") as f:
+    with open("config.json") as f:
         config = json.load(f)
         key = config.get('carrierkey')
 
@@ -52,7 +52,7 @@ if choice == "1":
         else:
             res = response.json()
             cars = res["carrier"]
-            print(f"{phone_number} : {cars}")
+            print(f"[{Fore.GREEN}+{Fore.RESET}] {phone_number} : {cars}")
             carrier = response.json()["carrier"]
             return carrier
     phone_number = input("Phone Number: ")
@@ -60,3 +60,22 @@ if choice == "1":
         print("Please Enter a phone number")
     else:
         get_carrier(phone_number)
+if choice == "2":
+  clear()
+  with open("config.json") as f:
+      config = json.load(f)
+      key = config.get('emailkey')
+  email = input("Email: ")
+  def check_email(email):
+    api_url = f"https://ipqualityscore.com/api/json/email/{key}/{email}"
+    response = requests.get(api_url)
+    if response.status_code != 200:
+        print(f"Failed to retrieve email information for {email}. Response status code: {response.status_code}")
+    else:
+      res = response.json()
+      ear = res["valid"]
+      dispo = res["disposable"]
+      fs = res["fraud_score"]
+      leaked = res["leaked"]
+      print(f"{email} | Valid: {ear} | Disposable: {dispo} | Fraud Score: {fs} | Leaked: {leaked}")
+  check_email(email)
