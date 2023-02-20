@@ -5,6 +5,7 @@ A Osint Mini Suite For Beginner And Advanced Users
 
 - Carrier Clerk (Carrier Lookup)
 - Email Investigator
+- IP InfoMaster
 ## Setup
 To Setup Watson Do The Following
 
