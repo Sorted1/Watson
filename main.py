@@ -18,7 +18,7 @@ def homeban():
     print(f"                      {Fore.RED}██{Fore.RESET}║{Fore.RED}███{Fore.RESET}╗{Fore.RED}██{Fore.RESET}║{Fore.RED}██{Fore.RESET}╔══{Fore.RED}██{Fore.RESET}║   {Fore.RED}██{Fore.RESET}║   ╚════{Fore.RED}██{Fore.RESET}║{Fore.RED}██{Fore.RESET}║   {Fore.RED}██{Fore.RESET}║{Fore.RED}██{Fore.RESET}║╚{Fore.RED}██{Fore.RESET}╗{Fore.RED}██{Fore.RESET}║".center(os.get_terminal_size().columns))
     print(f"                      {Fore.RESET}╚{Fore.RED}███{Fore.RESET}╔{Fore.RED}███{Fore.RESET}╔╝{Fore.RED}██{Fore.RESET}║  {Fore.RED}██{Fore.RESET}║   {Fore.RED}██{Fore.RESET}║   {Fore.RED}███████{Fore.RESET}║╚{Fore.RED}██████{Fore.RESET}╔╝{Fore.RED}██{Fore.RESET}║ ╚{Fore.RED}████{Fore.RESET}║".center(os.get_terminal_size().columns))
     print(f"{Fore.RESET}    ╚══╝╚══╝ ╚═╝  ╚═╝   ╚═╝   ╚══════╝ ╚═════╝ ╚═╝  ╚═══╝".center(os.get_terminal_size().columns))
-    print(f"[1] Carrier Clerk [2] Email Validator [3] IP InfoMaster".center(os.get_terminal_size().columns))
+    print(f"[1] Phone Priest [2] Email Validator [3] IP InfoMaster".center(os.get_terminal_size().columns))
     print("────────────────────────────────────────────────────────────────────────────────────────────────────")
     print("")
 homeban()
@@ -37,7 +37,7 @@ def banner():
 choice = input(f"{Fore.RED}Choice: {Fore.RESET}")
 if choice == "1":
     clear()
-    import modules.carrerclerk as carrerclerk
+    import modules.phonepriest as phonepriest
 if choice == "2":
   clear()
   import modules.emailcheck as emailcheck
