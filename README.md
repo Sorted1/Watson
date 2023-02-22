@@ -3,7 +3,7 @@ A Osint Mini Suite For Beginner And Advanced Users
 
 ## Features
 
-- Carrier Clerk (Carrier Lookup)
+- Phone Priest
 - Email Investigator
 - IP InfoMaster
 ## Setup
