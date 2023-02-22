@@ -37,10 +37,12 @@ def banner():
 choice = input(f"{Fore.RED}Choice: {Fore.RESET}")
 if choice == "1":
     clear()
-    import modules.phonepriest as phonepriest
+    banner()
+    import modules.phonepriest
 if choice == "2":
   clear()
-  import modules.emailcheck as emailcheck
+  banner()
+  import modules.emailcheck
 if choice == "3":
     clear()
     banner()
