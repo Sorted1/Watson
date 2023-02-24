@@ -43,7 +43,7 @@ def banner():
     
 
 while True:
-    maininput = input(f'[{Fore.RED}Terminator{Fore.RESET}]~: ')
+    maininput = input(f'[{Fore.RED}Watson{Fore.RESET}]~: ')
     if maininput == 'HELP' or maininput == 'help' or maininput == '?':
         print(f"""Commands:\n=========""")
         for root, dirs, files in os.walk('./modules'):
