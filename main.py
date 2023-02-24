@@ -56,23 +56,3 @@ while True:
             importlib.import_module("modules."+maininput, package=None)
         except ImportError:
             print("Command Not Found In Modules!")
-
-
-
-
-# if maininput == "1":
-#     clear()
-#     banner()
-#     import modules.phonepriest
-    
-# if maininput == "2":
-#   clear()
-#   banner()
-#   import modules.emailcheck
-
-# if maininput == "3":
-#     clear()
-#     banner()
-#     import modules.ipgeolocation as ipgeolocation
-#     ip_address = input("Enter an IPv4 address: ")
-#     ip_info = ipgeolocation.ipinfo(ip_address)
