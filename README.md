@@ -26,6 +26,8 @@ import json
 with open("config.json") as f:
     config = json.load(f)
     foo = config.get('foo')
+
+print(foo) #Will print what ever is in config under foo
 ```
 ## Authors
 
