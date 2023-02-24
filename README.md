@@ -21,15 +21,16 @@ To Setup Watson Do The Following
 * It is Open Game With Making Commands Do What you Want!
 * For Config Just Call To It With Json Doing This 
 ```py
+import json
+
 with open("config.json") as f:
     config = json.load(f)
     foo = config.get('foo')
-    bar = config.get('bar')
 ```
 ## Authors
 
 - [@Sorted1](https://www.github.com/sorted1)
-- [@node-digital](https://www.github.com/node-digital)
+- [@node-digital](https://www.github.com/Kauwzi)
 - [@0wls3c](https://www.github.com/0wls3c)
 ## License
 
