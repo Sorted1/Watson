@@ -44,7 +44,7 @@ while True:
     maininput = input(f'[{Fore.RED}Watson{Fore.RESET}]~: ')
     if maininput == 'HELP' or maininput == 'help' or maininput == '?':
         print(f"""Commands:\n=========""")
-        for root, dirs, files in os.walk('./modules'):
+        for root, dirs, files in os.walk('./commands'):
             for file in files:
                 if file.endswith('.py'):
                     os.path.basename(file).split('.')[0]
