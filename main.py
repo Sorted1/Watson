@@ -3,7 +3,7 @@ import os, colorama
 from colorama import Fore
 import requests, json
 from os import system
-import modules as modules
+import commands as commands
 import importlib
 
 os.system('title Watson')
@@ -51,6 +51,6 @@ while True:
                     print(os.path.basename(file).split('.')[0])
     else:
         try:
-            importlib.import_module("modules."+maininput, package=None)
+            importlib.import_module("commands."+maininput, package=None)
         except ImportError:
             print("Command Not Found In Modules!")
