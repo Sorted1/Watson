@@ -6,9 +6,7 @@ from os import system
 import modules as modules
 import importlib
 
-path = './modules'
-files_no_ext = [".".join(f.split(".")[:-1]) for f in os.listdir(path) if os.path.isfile(f)]
-
+os.system('title Watson')
 
 def clear():
     os.system("cls")
