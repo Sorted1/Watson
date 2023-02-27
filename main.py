@@ -27,7 +27,6 @@ def homeban():
     print(f"Type Help To See All Commands".center(os.get_terminal_size().columns))
     print("────────────────────────────────────────────────────────────────────────────────────────────────────")
     print("")
-homeban()
 
 def banner():
     print("")
@@ -42,8 +41,9 @@ def banner():
     
 
     
-
+homeban()
 while True:
+    
     maininput = input(f'[{Fore.RED}Watson{Fore.RESET}]~: ')
     if maininput == 'HELP' or maininput == 'help' or maininput == '?':
         print(f"""Commands:\n=========\nclear""")
