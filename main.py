@@ -9,7 +9,10 @@ import importlib
 os.system('title Watson')
 
 def clear():
-    os.system("cls")
+    try:
+        os.system("cls")
+    except:
+        os.system("clear")
 
 clear()
 system('mode con: cols=100 lines=30')
