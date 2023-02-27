@@ -1,5 +1,8 @@
 import requests
 
+
+
+ip = input("IP: ")
 def ipinfo(ip):
     api_url = f"http://ipwho.is/{ip}"
     response = requests.get(api_url)
@@ -13,4 +16,5 @@ def ipinfo(ip):
         region = res["region"]
         city = res["city"]
         postal = res["postal"]
-        print(f"IP: {ip}\nType: {typ}\nContinent: {cont}\nCountry: {cou}\nRegion: {region}\nCity: {city}\nPostal: {postal}")
+        print(f"===========\nIP: {ip}\nType: {typ}\nContinent: {cont}\nCountry: {cou}\nRegion: {region}\nCity: {city}\nPostal: {postal}")
+ipinfo(ip)
