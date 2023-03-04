@@ -1,6 +1,5 @@
 import requests
 
-
 ip = input("IP: ")
 def ipinfo(ip):
     response = requests.get(f"http://ipwho.is/{ip}")
