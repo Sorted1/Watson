@@ -1,8 +1,5 @@
 import json, requests
 
-
-cmdname = "test"
-
 with open("config.json") as f:
     config = json.load(f)
     key = config.get('emailkey')
