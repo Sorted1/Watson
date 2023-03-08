@@ -10,6 +10,7 @@ A Osint Mini Suite For Beginner And Advanced Users
 - Custom Command Handler
 - IP Lookup
 - Genderize (Guess Someones Gender With Probability)
+- Bin Checking
 ## Setup
 To Setup Watson Do The Following
 
