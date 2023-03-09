@@ -11,6 +11,7 @@ A Osint Mini Suite For Beginner And Advanced Users
 - IP Lookup
 - Genderize (Guess Someones Gender With Probability)
 - Bin Checking
+- SnusBase Integration
 ## Setup
 To Setup Watson Do The Following
 
