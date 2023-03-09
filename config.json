@@ -1,4 +1,5 @@
 {
     "carrierkey": "GET KEY FROM https://www.ipqualityscore.com/documentation/phone-number-validation-api/overview",
-    "emailkey": "GET KEY FROM https://www.ipqualityscore.com/documentation/email-validation/overview"
+    "emailkey": "GET KEY FROM https://www.ipqualityscore.com/documentation/email-validation/overview",
+    "beta.snusbase": "KEY HERE"
 }
