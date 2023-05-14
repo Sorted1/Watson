@@ -2,3 +2,4 @@ colorama
 requests
 json
 system
+dnsdumpster
