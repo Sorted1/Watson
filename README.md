@@ -35,8 +35,6 @@ print(foo) #Will print what ever is in config under foo
 ## Authors
 
 - [@Sorted1](https://www.github.com/sorted1)
-- [@node-digital](https://www.github.com/Kauwzi)
-- [@0wls3c](https://www.github.com/0wls3c)
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
